@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: $dark-grey;
+  font-family: 'Poppins', sans-serif;
+  font-size: $m-size;
+  height: 100%
+
+}
+
+.container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+   overflow: hidden;
+   display: block;
+   position: relative;
+   padding-bottom: 100px; /* height of your footer */
+ }

@@ -1,0 +1,32 @@
+.stats {
+  background: linear-gradient(-45deg,#ec5252,#6e1a52);
+  color: white;
+}
+
+.stats-wrapper {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+.stats-content {
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-around;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+ .stats-item {
+   margin-right: 10px;
+   display: flex;
+ }
+
+ .stats-item-icon {
+   margin-right: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }

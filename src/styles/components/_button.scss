@@ -1,0 +1,158 @@
+.button {
+  background: none;
+  color: #666;
+  border: 1px solid #505763;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+
+  &:hover {
+    background: #f2f3f5;
+  }
+
+
+  &--search {
+    border-radius: 0;
+    border-left: 0;
+  }
+}
+
+.button-cart {
+  background: none;
+  color: #666;
+  margin-right: 10px;
+  padding: 1rem;
+
+  &:hover {
+    background: #f2f3f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 100%;
+    padding: 1rem;
+  }
+}
+
+.button--register {
+  background: #2899ab;
+  border: 1px solid #2899ab;
+  border-radius: 2px;
+  color: white;
+  &:hover {
+    background: #218392;
+  }
+}
+
+.button--white:hover {
+  box-shadow: rgba(0,0,0,0.15) 0 7px 20px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+}
+
+.dropdown__container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 61%;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #007791;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background:none;
+    width: 100%;
+    border:none;
+}
+
+.dropdown-content button:hover {
+  background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #005467;
+}
+
+
+.cart-dropdown__container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 61%;
+}
+.cart-dropdown {
+  position: relative;
+  display: flex;
+}
+
+.cart-dropbtn {
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.cart-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+
+    button {
+       color: black;
+       padding: 12px 16px;
+       text-decoration: none;
+       display: block;
+       background:none;
+       width: 100%;
+       border:none;
+   }
+
+   button:hover {
+     background-color: #ddd
+   }
+}
+
+.cart-dropdown:hover .cart-dropdown-content {
+    display: block;
+}
+
+.cart-dropdown:hover .dropbtn {
+    background-color: #005467;
+    background: #f2f3f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 100%;
+    padding: 1rem;
+}
