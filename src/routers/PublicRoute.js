@@ -13,8 +13,7 @@ export const PublicRoute = ({
     isAuthenticated && props.match.path === '/register' ||
     isAuthenticated && props.match.path === '/register/success' ||
     isAuthenticated && props.match.path === '/auth/verify/:token' ||
-    isAuthenticated && props.match.path === '/auth/resend' ||
-    !isAuthenticated && props.match.path === '/logout'
+    isAuthenticated && props.match.path === '/auth/resend'
      ? (
       <Redirect to="/" />
     ) : (
@@ -30,29 +29,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(PublicRoute)
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import { Route, Redirect } from 'react-router-dom'
-// import Header from '../components/Header';
-//
-// export const PublicRoute = ({
-//   component: Component,
-//   ...rest
-// }) => (
-//   <Route {...rest} component={(props) => (
-//     <div>
-//       <Header />
-//       <Component {...props}/>
-//       {console.log(props)}
-//     </div>
-//   )}/>
-// )
-//
-// export default PublicRoute;

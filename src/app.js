@@ -7,6 +7,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import LoadingPage from './components/LoadingPage';
+import { AUTH_USER } from './actions/types';
 import AppRouter from './routers/AppRouter';
 
 const store = configureStore();
@@ -29,16 +30,15 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
-renderApp()
 
-// const token = localStorage.getItem('token')
-// if (token) {
-//   store.dispatch({ type: AUTH_USER })
-//   // store.dispatch(startSetArticles())
-//   setTimeout(() => {
-//     renderApp()
-//   },500)
-//   // renderApp()
-// } else {
-//   renderApp()
-// }
+const token = localStorage.getItem('token')
+if (token) {
+  store.dispatch({ type: AUTH_USER })
+  // store.dispatch(startSetArticles())
+  setTimeout(() => {
+    renderApp()
+  },500)
+  // renderApp()
+} else {
+  renderApp()
+}

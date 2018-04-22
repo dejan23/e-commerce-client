@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import BigPics from './BigPics';
 import Stats from './Stats';
 import Ads from './Ads';
+import FlashMessage from './FlashMessage';
 
 class DashboardPage extends React.Component {
   render() {
     return (
       <div>
+        <FlashMessage />
         <BigPics />
         <Stats />
         <Ads />

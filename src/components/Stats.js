@@ -1,8 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { startSetUsersCount } from '../actions/user';
+import { startSetProductsCount } from '../actions/product';
 
 
 class DashboardPage extends React.Component {
+  componentWillMount() {
+    this.props.startSetUsersCount()
+    this.props.startSetProductsCount()
+  }
+
   render() {
     return (
       <div className="stats">
@@ -12,9 +19,15 @@ class DashboardPage extends React.Component {
               <div className="stats-item-icon"><i className="fa fa-3x fa-users"></i></div>
               <div>
                 <h2>Users</h2>
-                Total: 13
+                Total: {
+                    !this.props.usersCount ?
+                    <span>0</span> :
+                    <span>{this.props.usersCount}</span>
+                  }
                 <br />
-                This month: 1
+                This month: <i style={{opacity: '0.5'}}>0</i>
+                <br />
+                <i style={{opacity: '0.5'}}>see all</i>
               </div>
             </div>
 
@@ -22,9 +35,15 @@ class DashboardPage extends React.Component {
               <div className="stats-item-icon"><i className="fas fa-3x fa-clipboard-list"></i></div>
               <div>
                 <h2>Products</h2>
-                Total: 13
+                Total: {
+                    !this.props.productsCount ?
+                    <span>0</span> :
+                    <span>{this.props.productsCount}</span>
+                  }
                 <br />
-                This month: 1
+                This month: <i style={{opacity: '0.5'}}>0</i>
+                <br />
+                <i style={{opacity: '0.5'}}>see all</i>
               </div>
             </div>
 
@@ -35,4 +54,9 @@ class DashboardPage extends React.Component {
   }
 }
 
-export default connect(null, null)(DashboardPage)
+const mapStateToProps = (state) => ({
+  usersCount: state.user.count,
+  productsCount: state.product.count
+})
+
+export default connect(mapStateToProps, { startSetUsersCount, startSetProductsCount })(DashboardPage)

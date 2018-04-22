@@ -3,7 +3,7 @@ import {
   UNAUTH_USER,
   AUTH_ERROR,
   SUCCESS_MESSAGE,
-  FETCH_MESSAGE,
+  CLEAR_MESSAGE,
   CLEAR_ALERT
 } from '../actions/types';
 
@@ -16,11 +16,11 @@ export default function(state = {}, action) {
     case AUTH_ERROR:
       return { ...state, error: action.payload }
     case SUCCESS_MESSAGE:
-      return { ...state, success: action.payload }
-    case FETCH_MESSAGE:
-      return { ...state, message: action.payload };
+      return { ...state, success: action.payload, message: 'Saved' }
     case CLEAR_ALERT:
       return { ...state, error: null  }
+    case CLEAR_MESSAGE:
+      return { ...state, success: action.payload, message: null }
   }
 
   return state;
